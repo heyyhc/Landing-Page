@@ -1,1 +1,3 @@
 Created for official landing page at https://www.howardchang.info
+
+It's a work in progress...
