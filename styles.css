@@ -46,7 +46,7 @@ table,td,tr{
     font-family: 'Garamond', serif;
     color: white;
     border: 1px transparent;
-    border-spacing: 1px;
+    border-spacing: 8px;
 }   
 th {
   text-align: left;
