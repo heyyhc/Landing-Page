@@ -15,49 +15,66 @@ html {
     var(--c1);
   background-size: var(--s) var(--s);
 }
+/* --- New Responsive Layout --- */
+.content-wrapper {
+    /* Use 'rem' for a better responsive unit for width */
+    max-width: 900px; /* Use a max-width instead of fixed width */
+    width: 90%; /* Scale up and down fluidly */
+    margin: 0 auto; /* Center the wrapper on the page */
+    padding-top: 50px; /* Replace the <BR><BR> */
+}
+
+.profile-section {
+    display: flex; /* Activate Flexbox for the two main columns */
+    align-items: flex-start; /* Align content to the top */
+    gap: 30px; /* Add space between the image and text */
+}
+
+.image-area {
+    /* Allocate space for the image area on desktop */
+    flex: 0 0 58%; 
+}
+
+.text-area {
+    /* Allow text area to take up remaining space */
+    flex: 0 0 62%; 
+}
+
+/* Ensure the image is flexible and doesn't exceed its container */
+.profile-pic {
+    max-width: 100%; 
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+/* Center the main title for better mobile flow */
 .p1 {
-  font-family: "Garamond, serif";
-  color: #b3b3cc;
-  font-size: 35px;
-  font-weight: normal;
-  text-align: center;
-} 
+        text-align: center;
+        font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 1.5rem; /* Slightly smaller for mobile */
+    }
+    /* Set the body text to justify better for a narrow screen */
 .p2 {
-  font-family: "Verdana, sans-serif";
-  color: #c2c2d6;
-  font-size: 18px;
-  text-align: left;
-  font-weight: normal;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        font-size: 1rem; /* Slightly smaller for mobile */
+    }
+/* --- Mobile Optimization: Stacking Layout Below 768px --- */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column; /* Stack the image and text vertically */
+        gap: 20px;
+    }
+
+    .image-area, .text-area {
+        flex: 0 0 auto; /* Allow both to take full width */
+        width: 100%; 
+    }
 }
-body {
-  font-family: 'Garamond', serif;
-  color: grey;
-  background: transparent;
-}
-.container {
-    position: relative;
-}
-.bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 33px;    
-}
-table,td,tr{
-    font-family: 'Garamond', serif;
-    color: white;
-    border: 1px transparent;
-    border-spacing: 8px;
-}   
-th {
-  text-align: left;
-  left: 10px;
-  vertical-align: top;
-  height: 5px;
-}
-contact-info {
-  font-family: 'Verdana', sans-serif;
-  color: #c2c2d6;
-  font-size: 18px;
-  text-align: left;
-  font-weight: normal;
+/* Add to your existing .icon style (which you don't have yet, so add this) */
+.icon {
+    margin: 2 25px; /* Increase horizontal space between icons */
+    width: 45px; /* Make the icons slightly larger for an easier tap target */
+    height: 45px;
 }
