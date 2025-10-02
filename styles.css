@@ -21,7 +21,7 @@ html {
     max-width: 900px; /* Use a max-width instead of fixed width */
     width: 90%; /* Scale up and down fluidly */
     margin: 0 auto; /* Center the wrapper on the page */
-    padding-top: 50px; /* Replace the <BR><BR> */
+    padding-top: 30px; /* Replace the <BR><BR> */
 }
 
 .profile-section {
